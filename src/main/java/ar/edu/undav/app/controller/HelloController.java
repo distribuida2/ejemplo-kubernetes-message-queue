@@ -1,7 +1,7 @@
-package com.learnk8s.app.controller;
+package ar.edu.undav.app.controller;
 
-import com.learnk8s.app.model.Ticket;
-import com.learnk8s.app.queue.QueueService;
+import ar.edu.undav.app.model.Ticket;
+import ar.edu.undav.app.queue.QueueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;

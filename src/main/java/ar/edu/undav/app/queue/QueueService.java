@@ -1,4 +1,4 @@
-package com.learnk8s.app.queue;
+package ar.edu.undav.app.queue;
 
 import org.apache.activemq.command.ActiveMQTextMessage;
 import org.slf4j.Logger;

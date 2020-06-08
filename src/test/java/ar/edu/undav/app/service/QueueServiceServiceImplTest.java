@@ -1,9 +1,8 @@
-package com.learnk8s.app.service;
+package ar.edu.undav.app.service;
 
-import com.learnk8s.app.queue.QueueService;
+import ar.edu.undav.app.SpringBootApplicationTests;
+import ar.edu.undav.app.queue.QueueService;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import com.learnk8s.app.SpringBootApplicationTests;
 
 public class QueueServiceServiceImplTest extends SpringBootApplicationTests {
 

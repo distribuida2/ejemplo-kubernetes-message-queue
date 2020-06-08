@@ -1,10 +1,9 @@
-package com.learnk8s.app;
+package ar.edu.undav.app;
 
-import com.learnk8s.app.queue.QueueService;
+import ar.edu.undav.app.queue.QueueService;
 import org.apache.activemq.command.ActiveMQTextMessage;
 import org.apache.activemq.junit.EmbeddedActiveMQBroker;
 import org.junit.Before;
-import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
