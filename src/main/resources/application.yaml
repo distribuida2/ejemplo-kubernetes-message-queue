@@ -1,11 +1,14 @@
 server:
   address: 0.0.0.0
-activemq:
-  brokerUrl: ${ACTIVEMQ_BROKER_URL:vm://localhost:61616}
+  port: 8080
+rabbitmq:
+  brokerUrl: ${RABBITMQ_BROKER_URL:localhost}
 queue:
-  name: ${QUEUE_NAME:mainQueue}
+  name: ${QUEUE_NAME:itemsToProcessQueue}
 worker:
   name: ${HOSTNAME:worker1}
-  enabled: ${WORKER_ENABLED:true}
+  enabled: ${WORKER_ENABLED:false}
 store:
   enabled: ${STORE_ENABLED:true}
+
+spring.rabbitmq.listener.simple.prefetch: 1

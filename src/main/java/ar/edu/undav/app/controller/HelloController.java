@@ -1,7 +1,7 @@
 package ar.edu.undav.app.controller;
 
 import ar.edu.undav.app.model.Ticket;
-import ar.edu.undav.app.queue.QueueService;
+import ar.edu.undav.app.queue.ElasticStoreRabbitQueueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -16,7 +16,7 @@ import java.util.UUID;
 public class HelloController {
 
     @Autowired
-    private QueueService queueService;
+    private ElasticStoreRabbitQueueService queueService;
 
     @Value("${queue.name}")
     private String queueName;
