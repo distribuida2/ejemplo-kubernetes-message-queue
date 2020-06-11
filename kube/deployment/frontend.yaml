@@ -18,12 +18,15 @@ spec:
         image: spring-boot-hpa
         imagePullPolicy: IfNotPresent
         env:
-        - name: RABBITMQ_BROKER_URL
-          value: "queue"
         - name: STORE_ENABLED
           value: "true"
         - name: WORKER_ENABLED
           value: "false"
+        - name: RABBITMQ_BROKER_URL
+          valueFrom:
+            configMapKeyRef:
+              name: store
+              key: rabbitmq_broker_url
         ports:
           - containerPort: 8080
         readinessProbe:
