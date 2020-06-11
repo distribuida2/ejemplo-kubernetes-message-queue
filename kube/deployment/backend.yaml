@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: backend
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       app: backend
@@ -19,9 +19,12 @@ spec:
       - name: backend
         image: spring-boot-hpa
         imagePullPolicy: IfNotPresent
+
         env:
-        - name: ACTIVEMQ_BROKER_URL
-          value: "tcp://queue:61616"
+        - name: SPRING_PROFILES_ACTIVE
+          value: "worker"
+        - name: RABBITMQ_BROKER_URL
+          value: "queue"
         - name: STORE_ENABLED
           value: "false"
         - name: WORKER_ENABLED

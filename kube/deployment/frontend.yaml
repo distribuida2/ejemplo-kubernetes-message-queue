@@ -18,8 +18,8 @@ spec:
         image: spring-boot-hpa
         imagePullPolicy: IfNotPresent
         env:
-        - name: ACTIVEMQ_BROKER_URL
-          value: "tcp://queue:61616"
+        - name: RABBITMQ_BROKER_URL
+          value: "queue"
         - name: STORE_ENABLED
           value: "true"
         - name: WORKER_ENABLED
